@@ -5,24 +5,26 @@
 // if divisble by 3 and 5 display 'fizzbuzz'
 
 $(document).ready(function() {
-
-	for (var i = 1; i <= 100; i++) {
-		
-		if (i % 3 == 0) {
-			console.log("fizz");
-		}
-		else if (i % 5 == 0) {
-			console.log("buzz");
-		}
-		else if (i % 15 == 0) {
-			console.log("fizzbuzz"); 
-		}
-		else {
-		 	console.log(i);
-		}
-	}
-
+	myFunction(number); 
 }); 
 
+function myFunction(number) {
+	for (var i = 1; i <= number; i++) {
+		
+		if (i % 3 == 0) {
+			document.write("<br/>fizz");
+		}
+		else if (i % 5 == 0) {
+			document.write("<br/>buzz");
+		}
+		else if (i % 15 == 0) {
+			document.write("<br/>fizzbuzz"); 
+		}
+		else {
+		 	document.write("<br/>" + i);
+		}
+	}
+};
 
-
+var number = prompt("Please enter a number", "0 - 100");
+console.log(number);
